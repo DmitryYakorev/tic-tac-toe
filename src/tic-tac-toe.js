@@ -78,15 +78,16 @@ class TicTacToe {
     }
 
     noMoreTurns() {
-
+      return this.turn >= 9;
     }
 
     isDraw() {
-
+      if(this.getWinner() || !this.noMoreTurns()) return false;
+      return true;
     }
 
     getFieldValue(rowIndex, colIndex) {
-
+      return this.field[rowIndex][colIndex];
     }
 
     setFieldValue(rowIndex, columnIndex) {
