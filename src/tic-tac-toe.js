@@ -87,11 +87,12 @@ class TicTacToe {
     }
 
     getFieldValue(rowIndex, colIndex) {
+      console.log(this.field,rowIndex,colIndex);
       return this.field[rowIndex][colIndex];
     }
 
     setFieldValue(rowIndex, columnIndex) {
-        this.field[rowIndex][columnIndex] = this.currentSymbol;
+        this.field[rowIndex][columnIndex] = this.current;
       }
     
       changeCurrent() {
